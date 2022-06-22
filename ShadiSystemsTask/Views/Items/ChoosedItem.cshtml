@@ -1,0 +1,43 @@
+﻿@model ShadiSystemsTask.Models.Item
+
+@{
+    ViewData["Title"] = "ChoosedItem";
+}
+
+<h1>ChoosedItem</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ItemName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cat)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => modelItem.ItemName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => modelItem.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => modelItem.CatId)
+            </td>
+
+        </tr>
+
+    </tbody>
+</table>

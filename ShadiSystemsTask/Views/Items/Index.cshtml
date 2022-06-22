@@ -1,0 +1,57 @@
+﻿@model IEnumerable<ShadiSystemsTask.Models.Item>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ItemName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cat.CatName)
+            </th>
+
+            <th></th>
+            <th>
+                <li>اختيار/عرض المنتج</li>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ItemName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cat.CatId)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ItemId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ItemId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ItemId">Delete</a>
+            </td>
+            <td>
+                
+                <li>
+                    <a asp-action="ChoosedItem" asp-route-id="@item.ItemId">اضغط هنا</a>
+                </li>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

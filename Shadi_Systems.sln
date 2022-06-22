@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32106.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShadiSystemsTask", "ShadiSystemsTask\ShadiSystemsTask.csproj", "{B9B7577F-D261-4FCD-8753-70A55D4F4CF4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B9B7577F-D261-4FCD-8753-70A55D4F4CF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9B7577F-D261-4FCD-8753-70A55D4F4CF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9B7577F-D261-4FCD-8753-70A55D4F4CF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9B7577F-D261-4FCD-8753-70A55D4F4CF4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7BACB4E1-DDE0-4C68-8788-CCC12FA4A013}
+	EndGlobalSection
+EndGlobal
