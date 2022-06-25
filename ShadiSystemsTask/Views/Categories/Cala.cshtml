@@ -1,0 +1,30 @@
+﻿@model ProductViewModel
+@{
+    ViewData["Title"] = "Cala";
+}
+
+<h1>Cala Total Price</h1>
+please enter your price:
+<input type="number" value="" id="p"/>
+<br />
+please enter your quantity:
+<input type="number" value="" id="q" />
+<br />
+Total Price is :
+<input type="number" value="" id="t">
+@section Scripts{ 
+    <script>
+        $(document).ready(function () {
+            $('#q').on('mouseleave', function () {
+                var x = $('#p').val();
+                var y = $('#q').val();
+                var z = x * y;
+                $('#t').val(z);
+                console.log(z);
+            })
+
+           
+        })
+    </script>
+}
+

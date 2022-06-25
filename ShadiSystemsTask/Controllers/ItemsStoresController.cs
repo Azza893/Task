@@ -21,6 +21,16 @@ namespace ShadiSystemsTask.Controllers
         // GET: ItemsStores
         public async Task<IActionResult> Index()
         {
+            var x = _context.ItemsStores.Join(
+                _context.Items,
+                n => n.ItemId,
+                i => i.ItemId,
+                (n, i) => new
+                {
+                    q=n.Quantity,
+                    p=i.Price
+                }
+                );
             var testDBContext = _context.ItemsStores.Include(i => i.Item);
             return View(await testDBContext.ToListAsync());
         }

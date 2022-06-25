@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ShadiSystemsTask.Models;
+using ShadiSystemsTask.ViewModels;
 
 namespace ShadiSystemsTask.Controllers
 {
@@ -58,7 +59,22 @@ namespace ShadiSystemsTask.Controllers
 
             return View(category);
         }
-
+        [HttpGet]
+        public IActionResult Cala()
+        {
+            List<Category> categories = _context.Categories.ToList();
+            ProductViewModel model = new ProductViewModel()
+            {
+                Cat = new Category()
+                {
+                    Items=_context.Items.ToList()
+                },
+                ItemsStores = _context.ItemsStores.ToList(),
+                
+                
+            };
+            return View(model);
+        }
         // GET: Categories/Create
         public IActionResult Create()
         {
@@ -67,7 +83,7 @@ namespace ShadiSystemsTask.Controllers
             return View();
         }
         // POST: Categories/Create
-       
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Create([Bind("CatId,CatName")] Category category)
